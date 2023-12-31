@@ -55,7 +55,6 @@ function ExpenseForm(props) {
                 <div className="new-expense__control">
                     <label htmlFor="Amount">Amount</label>
                     <input value={userInput.amount} onChange={amountChangeHandler} type="text" placeholder='Amount' />
-
                 </div>
                 <div className="new-expense__control">
                     <label htmlFor="Date">Date</label>
@@ -69,7 +68,10 @@ function ExpenseForm(props) {
             </div>
             <div className="new-expense__actions">
                 <button type="submit">Add Expense</button>
+                <button onClick={props.onCancel}>Cancel</button>
+
             </div>
+     
         </form>
 
     </div>
