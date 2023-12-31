@@ -7,7 +7,8 @@ function NewExpense(props) {
 
     const saveExpenseData = (data) => {
        const expenseData = {
-        ...data
+        ...data,
+        date: new Date(data.date)
        }
     //    console.log(expenseData);
     props.onAddExpense(expenseData)
